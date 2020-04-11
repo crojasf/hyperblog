@@ -2,7 +2,7 @@
 
 **$ pwd** --> muestra la ruta donde me encuentro
 
-**$ cd** o **$ cd ~**  --> desde donde esté me lleva a mi "home" de git en local. *~* es como una variable que contiene la ruta de mi HOME.
+**$ cd** o **$ cd \~**  --> desde donde esté me lleva a mi "home" de git en local. *\~* es como una variable que contiene la ruta de mi HOME.
 
 **$ clear** --> limpia pantalla
 
@@ -165,7 +165,7 @@ En la carpeta *.ssh* dentro de HOME de git se guardan las llaves en ficheros lla
 
 **$ eval $(ssh-agent -s)** --> evaluar si el servicio de llaves SSH está activado en el sistema. da como resultado algo como *Agent pid 0000* que significa que está activo.
 
-**$ ssh-add ~/.ssh/id_rsa** --> Agregar la llave privada al sistema. IMPORTANTE: se debe indicar la tuta exacta de la llave, por eso se pone el "~" delante.
+**$ ssh-add \~/.ssh/id_rsa** --> Agregar la llave privada al sistema. IMPORTANTE: se debe indicar la tuta exacta de la llave, por eso se pone el "\~" delante.
 
 
 
