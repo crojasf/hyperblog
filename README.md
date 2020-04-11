@@ -1,7 +1,10 @@
 # Comandos básico
-$ git init --> inicializa un repositorio (la carpeta donde estés).
-$ git add biografía.txt --> añade cambios del fichero a STAGING (temporal) del repositorio  de git.
+**$ git init** --> inicializa un repositorio (la carpeta donde estés).
+
+*$ git add biografía.txt* --> añade cambios del fichero a STAGING (temporal) del repositorio  de git.
+
 $ git commit -m "versión 1" --> añade cambios de STAGING al  repositorio local de git.
+
 $ git add . --> añade todo lo que se haya modificado en esa carpeta.
 $ git commit -m "cambios versión 1" --> añade nuevos cambios de STAGING al repositorio local de git.
 $ git status --> muestra los cambios pendientes antes del commit.
@@ -68,4 +71,26 @@ Merge lo que hace es traer los cambios de la rama que se indique y la fusiona co
 $ git checkout master -> pones el HEAD en la última versión de la master porque aquí quiero traer lo de cabecera.
 $ git merge cabecera -> fusiona todos los ficheros de cabecera en master.
 $ git branch -> lista el listado de ramas
+
+# Solución de conflictos al hacer un merge
+AL hacer unmerge, y una misma línea tiene 2 valores diferentes, muestra el error así
+```
+<<<<<<< HEAD
+		Cambios de la rama actual
+=======
+ 		Cambios de la rama que traigo con merge
+ >>>>>>> cabecera
+```
+En visualcode te muestra un menú justo arriba para ejecutar el cambio que quieras y quitar estas líneas.
+
+# Uso de GitHub
+
+https://github.com/
+Creamos cuenta en GitHub
+Creamos repositorio
+Copiamos la URL de mi repositorio creado
+En Master ejecutamos
+$ git remote add origin url_de_mi_repositorio_en_github --> crea en "origin" el enlace a mi repositorio online.
+$ git remote -v --> muestra las acciones que podemos realizar con "origin", que es el "fetch" para traer cosas y el "push" para enviar cosas.
+$ git push origin master --> envía la rama master de origin a master de repositorio y directorio local.
 
