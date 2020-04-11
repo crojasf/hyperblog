@@ -1,4 +1,19 @@
-# Comandos básico
+# Comandos básico consola
+
+**$ pwd** --> muestra la ruta donde me encuentro
+
+**$ cd** o **$ cd ~**  --> desde donde esté me lleva a mi "home" de git en local. *~* es como una variable que contiene la ruta de mi HOME.
+
+**$ clear** --> limpia pantalla
+
+**$ ls** --> muestra los ficheros de la carpeta donde estoy (comoel DIR de MS-DOS)
+
+**$ ls -al** --> muestra los ficheros uncluyendo los ocultos (con -a) y mostrando los detalles (con -l)
+
+
+
+
+# Comandos básico GIT
 **$ git init** --> inicializa un repositorio (la carpeta donde estés).
 
 **$ git add biografía.txt** --> añade cambios del fichero a STAGING (temporal) del repositorio  de git.
@@ -40,9 +55,9 @@ Cuando juntas una rama hacia el master el la accion (y el comeando) se llama "me
 
 
 # Configurar Git
-**$ git config** --> te dice cómo funciona
+**$ git config** --> muestra HELP del comando "config"
 
-**$ git --list** --> te salen los parámetros configurados
+**$ git config --list** o **-l** --> te salen los parámetros configurados
 
 **$ git config --global user.name "CarlosRojasF"** --> Agrega nombre al repositorio.
 
@@ -129,6 +144,37 @@ En Master ejecutamos
 **$ git remote -v** --> muestra las acciones que podemos realizar con "origin", que es el "fetch" para traer cosas y el "push" para enviar cosas.
 
 **$ git push origin master** --> envía la rama master de origin a master de repositorio y directorio local.
+
+Si da error _fatal: refusing to merge unrelated histrories_ es porque el histórico de commits de repositorio online (origin) no coincide con el del repositorio local. 
+
+**$ git push origin master --allow-unrelated-histories** --> soluciona conflicto de historias al enviar la rama master de origin a master de repositorio y directorio local.
+
+
+# Configurar tus llaves SSH en local
+**$ cd** --> Navegar a la ruta de mi HOME de git para crear aquí mi clave SSH
+
+**$ git config --global user.email "crojasf@gmail.com"** --> Configurar el git local para que el email configurado sea el mismo que tu cuenta de GITHUB.
+
+**$ ssh-keygen -t rsa -b 4096 -C "crojasf@gmail.com"** --> comando para generar clave. "-t" para escoger el algoritmo "rsa". "-b" para elegir la complejidad. "-C" (mayúsculas) para el email.
+
+Pregunta lugar donde guardar la clave, por defecto guarda en *c/Users/MI_USUARIO_WINDOWS/.ssh/id_rsa*. Pulsamos INTRO.
+
+Pregunta una contraseña adicional de texto para darle una capa más de seguridad. No es obligatorio.
+
+En la carpeta *.ssh* dentro de HOME de git se guardan las llaves en ficheros llamado **id_rsa** para la privada y **id_rsa.pub** para la pública. 
+
+**$ eval $(ssh-agent -s)** --> evaluar si el servicio de llaves SSH está activado en el sistema. da como resultado algo como *Agent pid 0000* que significa que está activo.
+
+**$ ssh-add ~/.ssh/id_rsa** --> Agregar la llave privada al sistema. IMPORTANTE: se debe indicar la tuta exacta de la llave, por eso se pone el "~" delante.
+
+
+
+
+
+
+
+
+
 
 
 
