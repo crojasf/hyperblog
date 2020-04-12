@@ -227,6 +227,17 @@ Copiamos la URL de HTTPS o SSH en el equipo del colaborador.
 En GitHub, dentro del repositorio, entrar a los settings del repostiorio y en "Manage access" asignamos el usuario de GitHub del colaborador.
 
 
+# Flujo de trabajo de trabajo: merge de ramas a master
+
+Se crea ramas diferentes a master donde cada colaborador trabaja.
+
+Los colaboradores trabajan en sus ramas y la suben a GitHub.
+
+EL presponsable dle proyecto baja esas ramas, verifica los cambios, y si todo está OK hace merge a master y sube a Github.
+
+
+# Flujo de trabajo de trabajo: colaborador con Pull request
+
 
 
 
