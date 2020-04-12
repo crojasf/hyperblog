@@ -53,18 +53,6 @@ Las más comunes
 
 Cuando juntas una rama hacia el master el la accion (y el comeando) se llama "merge"
 
-**$ git checkout mombre_rama** --> cambio HEAD de la rama actual a la indicada.
-
-**$ git brunch** --> muestra las ramas marcando con \* la rama actual (HEAD)
-
-**$ git show-branch** --> muestra la historia de las ramas.
-
-**$ git show-branch --all** --> muestra la historia de las ramas con un poco más de datos.
-
-**$ gitk** --> abre una ventana software donde se ve todo en detalle visualmente.
-
-
-
 
 # Configurar Git
 **$ git config** --> muestra HELP del comando "config"
@@ -218,6 +206,27 @@ Como el comando es muy largo, creamos una *alias* para guardarlo. (esta es una c
 
 
 # Manejo de ramas en GitHub
+**$ git branch nombre_rama** --> crea una rama con "nombre_rama".
+
+**$ git checkout mombre_rama** --> cambio HEAD de la rama actual a la indicada.
+
+**$ git brunch** --> muestra las ramas marcando con \* la rama actual (HEAD)
+
+**$ git show-branch** --> muestra la historia de las ramas.
+
+**$ git show-branch --all** --> muestra la historia de las ramas con un poco más de datos.
+
+**$ gitk** --> abre una ventana software donde se ve todo en detalle visualmente.
+
+
+# Configurar múltiples colaboradores en un repositorio de GitHub
+Copiamos la URL de HTTPS o SSH en el equipo del colaborador.
+
+**$ git clone https://github.com/crojasf/hyperblog.git"** --> clona el repositorio remoto en el equipo del colaborador.
+
+En GitHub, dentro del repositorio, entrar a los settings del repostiorio y en "Manage access" asignamos el usuario de GitHub del colaborador.
+
+
 
 
 
