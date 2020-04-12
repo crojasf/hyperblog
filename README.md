@@ -219,6 +219,17 @@ Como el comando es muy largo, creamos una *alias* para guardarlo. (esta es una c
 **$ gitk** --> abre una ventana software donde se ve todo en detalle visualmente.
 
 
+# Configurar múltiples colaboradores en un repositorio de GitHub
+Copiamos la URL de HTTPS o SSH en el equipo del colaborador.
+
+**$ git clone https://github.com/crojasf/hyperblog.git"** --> clona el repositorio remoto en el equipo del colaborador.
+
+En GitHub, dentro del repositorio, entrar a los settings del repostiorio y en "Manage access" asignamos el usuario de GitHub del colaborador.
+
+
+
+
+
 
 
 
