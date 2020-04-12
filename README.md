@@ -151,6 +151,8 @@ Si da error _fatal: refusing to merge unrelated histrories_ es porque el histór
 
 
 # Configurar tus llaves SSH en local
+Crear una llave por cada equipo físico que tengas.
+
 **$ cd** --> Navegar a la ruta de mi HOME de git para crear aquí mi clave SSH
 
 **$ git config --global user.email "crojasf@gmail.com"** --> Configurar el git local para que el email configurado sea el mismo que tu cuenta de GITHUB.
@@ -166,6 +168,16 @@ En la carpeta *.ssh* dentro de HOME de git se guardan las llaves en ficheros lla
 **$ eval $(ssh-agent -s)** --> evaluar si el servicio de llaves SSH está activado en el sistema. da como resultado algo como *Agent pid 0000* que significa que está activo.
 
 **$ ssh-add \~/.ssh/id_rsa** --> Agregar la llave privada al sistema. IMPORTANTE: se debe indicar la tuta exacta de la llave, por eso se pone el "\~" delante.
+
+
+# Conexión a GitHub con SSHH
+En GitHub > Perfil > Settings > SSH and GPG keys agregamos las clave pública SSH de mi equipo.
+
+En el ordenador cambiaremos la dirección de "origin" para que en vez de HTTPS sea el SSH
+
+**$ git remote set-url origin git@github.com:crojasf/hyperblog.git** --> cambiamos la la "url" de origin por el ssh key.
+
+**$ git remote -v** --> para ver la nueva "url".
 
 
 
