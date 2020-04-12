@@ -13,7 +13,7 @@
 
 
 
-# Comandos básico GIT
+# Comandos iniciales de GIT
 **$ git init** --> inicializa un repositorio (la carpeta donde estés).
 
 **$ git add biografía.txt** --> añade cambios del fichero a STAGING (temporal) del repositorio  de git.
@@ -30,9 +30,9 @@
 
 **$ git log biografía.txt** --> muestra el histórico de cambios del archivo indicado.
 
-**$ git push** --> lo manda a un repositorio remoto.
+**$ git push <conector> <rama>** --> los cambios son *ENVIADOS* a través de "<conector>" a la "<rama>" del repositorio remoto.
 
-**$ git pull** --> lo trae de un repositorio remoto.
+**$ git pull <conector> <rama>** --> los cambios son *TRAIDOS*  a través de "<conector>" a la "<rama>" del repositorio remoto.
 
 
 # Instalación
@@ -52,6 +52,18 @@ Las más comunes
 * hotfix --> para parches
 
 Cuando juntas una rama hacia el master el la accion (y el comeando) se llama "merge"
+
+**$ git checkout mombre_rama** --> cambio HEAD de la rama actual a la indicada.
+
+**$ git brunch** --> muestra las ramas marcando con \* la rama actual (HEAD)
+
+**$ git show-branch** --> muestra la historia de las ramas.
+
+**$ git show-branch --all** --> muestra la historia de las ramas con un poco más de datos.
+
+**$ gitk** --> abre una ventana software donde se ve todo en detalle visualmente.
+
+
 
 
 # Configurar Git
@@ -178,6 +190,37 @@ En el ordenador cambiaremos la dirección de "origin" para que en vez de HTTPS s
 **$ git remote set-url origin git@github.com:crojasf/hyperblog.git** --> cambiamos la la "url" de origin por el ssh key.
 
 **$ git remote -v** --> para ver la nueva "url".
+
+Ahora no pedirá el usuario y contraseña de gitHub cada vez que abras el terminal para trabajar.
+
+
+# Tags y versiones en Git y GitHub
+
+Ver la historia más detallada y visual
+
+**$ git log --all --graph --decorate --oneline** --> muestra la histroria pero sintetizada y visualmente más clara.
+
+Como el comando es muy largo, creamos una *alias* para guardarlo. (esta es una característica de la consola bash y no de git).
+
+**$ alias arbolito="git log --all --graph --decorate --oneline"** crear un alias con un comando largo.
+
+**git tag -a nombre_tag -m "mensaje del tag" ade7061** --> crear un "tag" (se recomienda usar vX.Y) en el commit cuya "referencia de HASH" se indique al final del comando.
+
+**$ git tag** --> muestra todos los tags.
+
+**$ git show-ref --tag** --> muestra el HASH y su tag relacionado.
+
+**$ git push origin --tags** --> subir solo los tags al repositorio online
+
+**$ git tag -d nombre_tag** --> eliminar un tag por nombre pero solo en los repositorios, pero eh GitHub se sigue mostrando como "visible"
+
+**$ git push origin :refs/tags/nombre_tag** --> elimina definitivamente en GitHub el tag.
+
+
+# Manejo de ramas en GitHub
+
+
+
 
 
 
